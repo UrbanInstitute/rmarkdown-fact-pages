@@ -1,0 +1,104 @@
+---
+title: ""
+author: ""
+date: "`r format(Sys.time(), '%B %d, %Y %H:%M')`"
+output:
+  html_document:
+    self_contained: TRUE
+    toc: TRUE
+    toc_float: TRUE
+    css: www/web_report.css
+    editor_options:
+      chunk_output_type: console
+---
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+</style>
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato" />
+
+```{r header-image, fig.width = 5.14, fig.height = 1.46, echo = FALSE}
+# All defaults
+knitr::include_graphics("www/images/urban-institute-logo.png")
+```
+
+# Title 1
+
+## Title 2
+
+### Title 3
+
+#### Title 4
+
+##### Title 5
+
+###### Title 6
+
+####### Title 7
+
+<a id="date">November 11, 2019</a>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+*Italicized font*
+
+**Bold font**
+
+~~Struck font~~
+
+[Hyperlinks](https://urbaninstitute.github.io/r-at-urban/index.html)
+
+* Bullet 1
+* Bullet 2
+* Bullet 3
+
+1) Number 1
+2) Number 2
+3) Number 3
+
+a) Letter a
+b) Letter b
+c) Letter c
+
+A) Letter A
+B) Letter B
+C) Letter C
+
+
+### Grid table
++----------------+---------------+------------------------------+
+| State          | Population    | Representation               |
++================+===============+==============================+
+| Montana        | 577,737       | - 2 Senators                 |
+|                |               | - 1 Represenativie           |
++----------------+---------------+------------------------------+
+| Washington, DC | 702,455       | - 0 Senators                 |
+|                |               | - 1 non-voting Represenative |
++----------------+---------------+------------------------------+
+
+
+### Pipe table (alignment)
+| Default | Right | Left | Center |
+|---------|------:|:-----|:------:|
+|    12   |   12  |  12  |    12  |
+|   123   |  123  |  123 |   123  |
+|     1   |    1  |    1 |     1  |
+
+### Mathematical notation
+
+$\sum_{i = 1}^n \mu_i = n\mu$
+
+$$\sum_{i = 1}^n \mu_i = n\mu$$
+
+```{r rmarkdown-setup, echo = FALSE}
+knitr::opts_chunk$set(warning = FALSE)
+knitr::opts_chunk$set(message = FALSE)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r setup}
+options(scipen = 999)
+
+library(tidyverse)
+```
