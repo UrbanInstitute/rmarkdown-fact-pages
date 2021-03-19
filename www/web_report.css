@@ -1,15 +1,15 @@
 /* Global Formats */
 .container-fluid {
-  font-family: Lato;
+  font-family: Lato, Arial, sans-serif;
 }
 
 .main-container {
-  font-family: Lato;
+  font-family: Lato, Arial, sans-serif;
 }
 
 /* title styles */
 h1 {
-  font: 400 30px/1.3em Lato,sans-serif;
+  font: 400 30px/1.3em  Lato, Arial, sans-serif;
   margin: 0 0 .5em;
 }
 
@@ -18,7 +18,7 @@ h2 {
 }
 
 h4 {
-  font: 400 24px/30px Lato,sans-serif;
+  font: 400 24px/30px  Lato, Arial, sans-serif;
     font-style: normal;
     font-variant-ligatures: normal;
     font-variant-caps: normal;
@@ -28,12 +28,12 @@ h4 {
     font-stretch: normal;
     font-size: 24px;
     line-height: 30px;
-    font-family: Lato, sans-serif;
+    font-family:  Lato, Arial, sans-serif;
 }
 
 /* paragraph styles */ 
 p {
-  font-size: 16px;
+  font-size: 14px;
   margin: 0 0 8px 0;
 }
 
@@ -104,4 +104,45 @@ li {
     color: #666;
     margin-bottom: 2em;
     margin-top: 2em;
+}
+
+@media print{
+    /* remove elements */
+    #TOC, #toc, #header-pinned{
+        display: none;
+    }
+    .nav-tabs{
+        display: none;
+    }
+    .exclude{
+        display: none;
+    }
+    .contentBlock.title{
+        padding-top: 0px;
+    }
+    .expandContainer{
+        height: fit-content !important;
+        height: -moz-fit-content;
+    }
+    .expandFull{
+        display: block !important;
+    }
+  @page {
+    size: 210mm 297mm; /* portrait 
+    /* you can also specify margins here: */
+    margin: 15mm;   
+   /*margin-right: 45mm;  for compatibility with both A4 and Letter */
+  }
+  /* page breaks */
+  .printbreak { 
+    page-break-before: always;
+  }
+  .avoidpagebreak {
+    break-inside: avoid-page;
+  }
+}
+
+.p2 {
+  font-size: 14px;
+  margin: 0 0 8px 0;
 }

@@ -1,29 +1,67 @@
 ---
-title: ""
-author: ""
+title: ''
+author: ''
 date: "`r format(Sys.time(), '%B %d, %Y %H:%M')`"
+font: Lato
 output:
   html_document:
-    self_contained: TRUE
-    toc: TRUE
-    toc_float: TRUE
     css: www/web_report.css
+    mathjax: null    
     editor_options:
       chunk_output_type: console
+params:
+  year: NA
 ---
+
+```{=html}
+<style>
+@media print{
+  a[href]:after{
+    content:""!important;
+  }
+}
+</style>
 
 <style>
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 </style>
 
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato" />
-
-```{r header-image, fig.width = 5.14, fig.height = 1.46, echo = FALSE}
-# All defaults
-knitr::include_graphics("www/images/urban-institute-logo.png")
 ```
 
-# Title 1
+```{r header-image, out.width = "40%", echo = FALSE}
+# All defaults
+knitr::include_graphics("www/images/urban-institute-logo.png")
+#fig.width = 5.14, 
+
+```
+
+```{r rmarkdown-setup, echo = FALSE}
+knitr::opts_chunk$set(warning = FALSE)
+knitr::opts_chunk$set(message = FALSE)
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(dev = "svg")
+
+```
+
+```{r setup}
+library(tidyverse)
+library(urbnthemes)
+
+set_urbn_defaults(style = "print")
+options(scipen = 999)
+
+```
+
+```{r data, eval = FALSE}
+geo_key <- read_csv("") %>%
+  filter(state == params$state)
+
+```
+
+<!--html_start-->
+
+# [Title 1](https://www.urban.org/)
 
 ## Title 2
 
@@ -34,8 +72,6 @@ knitr::include_graphics("www/images/urban-institute-logo.png")
 ##### Title 5
 
 ###### Title 6
-
-####### Title 7
 
 <p class="header-caption">November 11, 2019</p>
 
@@ -85,20 +121,5 @@ C) Letter C
 |   123   |  123  |  123 |   123  |
 |     1   |    1  |    1 |     1  |
 
-### Mathematical notation
 
-$\sum_{i = 1}^n \mu_i = n\mu$
-
-$$\sum_{i = 1}^n \mu_i = n\mu$$
-
-```{r rmarkdown-setup, echo = FALSE}
-knitr::opts_chunk$set(warning = FALSE)
-knitr::opts_chunk$set(message = FALSE)
-knitr::opts_chunk$set(echo = FALSE)
-```
-
-```{r setup}
-options(scipen = 999)
-
-library(tidyverse)
-```
+<!--html_end-->
