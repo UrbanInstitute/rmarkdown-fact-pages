@@ -31,6 +31,11 @@ h4 {
     font-family:  Lato, Arial, sans-serif;
 }
 
+#figure_number {
+  color: #1696d2;
+  font-size: 11px;
+}
+
 /* paragraph styles */ 
 p {
   font-size: 14px;

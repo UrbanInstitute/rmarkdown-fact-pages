@@ -121,5 +121,6 @@ C) Letter C
 |   123   |  123  |  123 |   123  |
 |     1   |    1  |    1 |     1  |
 
+<div id="figure_number">FIGURE 1</div>
 
 <!--html_end-->
